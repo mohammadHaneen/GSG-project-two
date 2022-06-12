@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #1f1f1f;
+  --secandry-color: #303030;
+  --btn-transition: 0.1s;
+  --section-padding: 100px;
+  --main-transition: 0.3s;
+  --my-name: "Lukasz";
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Lobster", cursive;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* Start Header */
+.header {
+  position: fixed;
+  width: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 214, 0, 1) 19%,
+    rgba(237, 245, 52, 1) 39%,
+    rgba(234, 255, 20, 1) 63%,
+    rgba(255, 214, 0, 1) 87%
+  );
+  z-index: 10;
+}
+nav h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 800px;
+  color: #fff;
+  padding: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+/* End Header */
+/* Start Main */
+.main {
+  padding: 100px 0;
+  background: var(--secandry-color);
+  position: relative;
+}
+.search-bar form {
+  width: 100%;
+  padding: 1rem 1rem;
+  margin: 2rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: radial-gradient(
+    circle,
+    rgba(255, 214, 0, 1) 19%,
+    rgba(237, 245, 52, 1) 39%,
+    rgba(234, 255, 20, 1) 63%,
+    rgba(255, 214, 0, 1) 87%
+  );
+  box-shadow: 20px 20px 40px rgb(0 0 0 / 40%);
+  border-radius: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.search-bar .in-search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+select {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  color: black;
+  order: 1;
+}
+.search-bar input {
+  flex: 3;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 5rem;
+  border: none;
+  outline: none;
+  order: 2;
+}
+.search-bar button {
+  background: none;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  order: 3;
+}
+.search-bar button img {
+  width: 100%;
+  border-radius: 50%;
+}
+.main .add_dish {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5rem;
+  padding: 10px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 214, 0, 1) 19%,
+    rgba(237, 245, 52, 1) 39%,
+    rgba(234, 255, 20, 1) 63%,
+    rgba(255, 214, 0, 1) 87%
+  );
+  margin-bottom: 2rem;
+  display: block;
+  width: fit-content;
+  cursor: pointer;
+}
+.dish-container {
+  background: radial-gradient(
+    circle,
+    rgba(255, 214, 0, 1) 19%,
+    rgba(237, 245, 52, 1) 39%,
+    rgba(234, 255, 20, 1) 63%,
+    rgba(255, 214, 0, 1) 87%
+  );
+  box-shadow: 20px 20px 40px rgb(0 0 0 / 40%);
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  margin-bottom: 30px;
+}
+.dish-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 10px;
+  position: relative;
+  justify-content: center;
+}
+
+.dish {
+  position: relative;
+  margin: 15px 0;
+  background: var(--main-color);
+  box-shadow: 20px 20px 40px rgb(0 0 0 / 40%);
+  border-radius: 8px;
+  padding: 5px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dish::before {
+  position: absolute;
+  top: -20px;
+  left: 5%;
+  background: var(--main-color);
+  padding: 10px 15px;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.dish .img-dish {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.dish .img-dish img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dish .dish-title {
+  padding: 15px 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.dish .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: yellow;
+}
+.category {
+  margin: 0 auto;
+  padding: 10px;
+  width: fit-content;
+  color: yellow;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.ingredients {
+  width: fit-content;
+  margin: 0 auto;
+  color: white;
+  word-spacing: 2px;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .search-bar input {
+    padding: 10px 10px;
+    padding-left: 15px;
+    font-size: 1rem;
+  }
+  .search-bar button img {
+    width: 80%;
+  }
+}
+/* End Main */
+/* --Add Form-- */
+.add-form {
+  padding: 50px 10px;
+  background: var(--secandry-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 10px 10px 40px rgb(0 0 0 / 40%);
+  border-radius: 10px;
+}
+.add-form-box {
+  position: relative;
+}
+.add-title {
+  background: radial-gradient(
+    circle,
+    rgba(255, 214, 0, 1) 19%,
+    rgba(237, 245, 52, 1) 39%,
+    rgba(234, 255, 20, 1) 63%,
+    rgba(255, 214, 0, 1) 87%
+  );
+  border-radius: 5rem;
+  margin-bottom: 3rem;
+}
+.add-title {
+  padding: 2rem 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+.add-form-box input {
+  background: white;
+  outline: none;
+  font-size: 18px;
+  padding: 15px 15px;
+  border-radius: 5px;
+  border: none;
+}
+.form-input {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 10px;
+  margin-bottom: 3rem;
+}
+.btn-add-dish {
+  display: block;
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--main-color);
+  background: radial-gradient(
+    circle,
+    rgba(255, 214, 0, 1) 19%,
+    rgba(237, 245, 52, 1) 39%,
+    rgba(234, 255, 20, 1) 63%,
+    rgba(255, 214, 0, 1) 87%
+  );
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  width: fit-content;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .form-input {
+    grid-template-columns: none;
+  }
+  .add-title {
+    padding: 20px;
+  }
+}
+/* --Add Form-- */

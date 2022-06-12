@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Menu</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <!-- Styles -->
+  <link rel="stylesheet" href="app.css" />
+  <!-- Styles -->
+</head>
+
+<body>
+  <!-- Start Header -->
+  <div class="header">
+    <div class="container">
+      <nav>
+        <h1>Yummy</h1>
+      </nav>
+    </div>
+  </div>
+  <!-- End Header -->
+  <!-- Start Main -->
+  <div class="main">
+    <div class="container" style="position:relative ;">
+      <div class="search-bar">
+        <form action="" id="search-form">
+          <select name="select-dish" id="select-dish">
+            <option value="">Choose Your Dish</option>
+            <option value="fast food">Fast Food</option>
+            <option value="sweets">Sweets</option>
+            <option value="drinks">Drinks</option>
+          </select>
+          <div class="in-search">
+            <input type="text" placeholder="Search for a dish" id="enter-dish-name" name="search" />
+            <button type="submit" id="submit-form">
+              <img src="/Project-Two/src/search.png" alt="" />
+            </button>
+          </div>
+        </form>
+      </div>
+      <a class="add_dish" id="#add-form" _target="blank">Add Dish</a>
+      <div class="dish-container" id="dish-container">
+      </div>
+      <div class="add-form container" id="add-form">
+        <h2 class="add-title">Add a dish</h2>
+        <form class="add-form-box">
+          <div class="form-input">
+            <!-- new dish (n-d) -->
+            <input type="text" placeholder="Name" name="name" id="n-d-name" />
+            <input type="text" placeholder="Category" name="category" id="n-d-category" />
+            <input type="text" placeholder="Price" name="price" id="n-d-price" />
+            <input type="text" placeholder="Ingredients" name="ingredients" id="n-d-ingredients" />
+            <input type="text" placeholder="image" name="image" id="n-d-image" />
+          </div>
+          <button class="btn-add-dish" type="submit" id="btn-add-dish">
+            Add Dish
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!-- End Main -->
+  <script src="app.js"></script>
+</body>
+
+</html>
